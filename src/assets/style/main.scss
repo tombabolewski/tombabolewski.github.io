@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&family=Barlow:wght@400;700&display=swap");
+
+$text: #fff;
+$black: #000;
+$body-size: 20px;
+
+$family-primary: "Barlow", sans-serif;
+$family-secondary: "Satisfy", sans-serif;
+
+@import "bulma/bulma.sass";
