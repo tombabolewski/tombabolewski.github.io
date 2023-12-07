@@ -1,7 +1,8 @@
 <template>
   <div class="halftone">
-    <div class="layer2"></div>
-    <div class="layer3">
+    <div class="layer2 gradient" id="layer2"></div>
+    <div class="layer3 gradient invisible" id="layer3"></div>
+    <div class="layer4">
       <full-page ref="fullpage" :options="options">
         <fp-section id="section1">
           <div class="column is-flex is-align-items-center px-6 is-half">
@@ -12,24 +13,27 @@
           >
             <div class="content">
               <h1 class="is-size-2 is-family-secondary mb-4">
-                Bringing ideas to life<br />in pixels and code
+                Ożywiamy Twoje pomysły
               </h1>
               <p class="has-text-justified mb-4">
-                Hello! We are a digital creative agency!<br />
-                We are your partner in crafting
-                <strong>stunning visuals</strong>
-                and
-                <strong>interactive experiences</strong>
-                that leave a lasting impression.
+                Cześć! Jesteśmy Twoją agencją kreatywną!
               </p>
               <p class="has-text-justified mb-4">
-                Join us on a journey where innovation meets imagination!
+                Jesteśmy Twoim partnerem w tworzeniu i doskonaleniu
+                <strong>aplikacji webowych</strong>,
+                <strong>stron internetowych</strong>,
+                <strong>sklepów internetowych</strong>,
+                oraz
+                <strong>interaktywnych doświadczeń</strong>, które pozostawiają trwałe wrażenie
+              </p>
+              <p class="has-text-justified mb-4">
+                Dołącz do nas w podróży tam, gdzie innowacja spotyka wyobraźnię!
               </p>
               <button
                 class="button is-medium is-black mt-4"
                 @click="$refs.fullpage.api.moveTo(4)"
               >
-                Contact us!
+                Skontaktujmy się!
               </button>
             </div>
           </div>
@@ -40,17 +44,17 @@
           >
             <div class="content">
               <h2 class="is-size-3 is-family-secondary mb-4">
-                From before start to after finish...
+                Od początku do końca... i jeszcze dalej!
               </h2>
               <p class="has-text-justified mb-4">
-                Tell us your dreams and we will take care of the rest. <br />
-                Our experts will tailor your new web application to your needs.
+                Zdradź nam swoje marzenia, a my zajmiemy się resztą<br />
+                Nasi eksperci dostostosują się do Twoich wymagań i zaproponują najlepsze rozwiązania
               </p>
               <p class="has-text-justified mb-4">
-                Need a design? No problem.<br />
-                Back-end? Say no more<br />
-                Front-end? Sure.<br />
-                Hosting, Dev-ops, Support? We're here to help!
+                <span class="has-text-weight-bold">Potrzebny design?</span> No problem.<br />
+                <span class="has-text-weight-bold">Back-end?</span> Mamy to obcykane!<br />
+                <span class="has-text-weight-bold">Front-end?</span> Pewnie.<br />
+                <span class="has-text-weight-bold">Hosting, Dev-ops, Support?</span> Chętnie pomożemy!
               </p>
             </div>
           </div>
@@ -59,18 +63,62 @@
           >
             <div>
               <div>
-                <span class="has-background-black">Web applications</span>
+                <strong class="has-background-black has-text-white has-text-weight-normal">Aplikacje webowe</strong>
               </div>
-              <div><span class="has-background-black">E-shops</span></div>
-              <div><span class="has-background-black">Integrations</span></div>
-              <div><span class="has-background-black">Design</span></div>
               <div>
-                <span class="has-background-black">>... and more!</span>
+                <strong class="has-background-black has-text-white has-text-weight-normal">Sklepy internetowe</strong>
+              </div>
+              <div>
+                <strong class="has-background-black has-text-white has-text-weight-normal">Integracje</strong>
+              </div>
+              <div>
+                <strong class="has-background-black has-text-white has-text-weight-normal">Design</strong>
+              </div>
+              <div>
+                <span class="has-background-black">>... i nie tylko!</span>
               </div>
             </div>
           </div>
         </fp-section>
-        <fp-section id="section3"> </fp-section>
+        <fp-section id="section3">
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <h2 class="is-inline-block has-background-black is-size-2 mb-6">Stwórzmy dla Ciebie plan!</h2>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column">
+                <div class="has-background-white has-text-black px-4 py-4">
+                  <div class="mb-3">
+                    <span class="numblock has-background-black has-text-white is-size-1 has-text-weight-bold mr-3">1</span>
+                    <span class="is-size-4 is-family-secondary">Zbadamy Twoje potrzeby</span>
+                  </div>
+                  <div class="mb-3">
+                    <span class="numblock has-background-black has-text-white is-size-1 has-text-weight-bold mr-3">2</span>
+                    <span class="is-size-4 is-family-secondary">Zaplanujemy wspólnie etapy projektu</span>
+                  </div>
+                  <div class="mb-3">
+                    <span class="numblock has-background-black has-text-white is-size-1 has-text-weight-bold mr-3">3</span>
+                    <span class="is-size-4 is-family-secondary">Przygotujemy projekt graficzny</span>
+                  </div>
+                  <div class="mb-3">
+                    <span class="numblock has-background-black has-text-white is-size-1 has-text-weight-bold mr-3">4</span>
+                    <span class="is-size-4 is-family-secondary">Napiszemy kod Twojej nowej aplikacji</span>
+                  </div>
+                  <div class="mb-3">
+                    <span class="numblock has-background-black has-text-white is-size-1 has-text-weight-bold mr-3">5</span>
+                    <span class="is-size-4 is-family-secondary">Zajmiemy się wdrożeniem</span>
+                  </div>
+                  <div>
+                    <span class="numblock has-background-black has-text-white is-size-1 has-text-weight-bold mr-3">6</span>
+                    <span class="is-size-4 is-family-secondary">Będziemy do Twoich usług tak długo, jak chcesz!</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fp-section>
         <fp-section id="section4"> </fp-section>
       </full-page>
       <div id="bg-block"></div>
@@ -84,6 +132,15 @@ import VideoOverlay from "./components/VideoOverlay.vue";
 import Logo from "./components/Logo.vue";
 import FpSection from "./components/FpSection.vue";
 
+const randGradient = () => {
+  const randomColorValue = Math.random() * 360;
+  const invisible = document.querySelector(".gradient.invisible");
+  const visible = document.querySelector(".gradient:not(.invisible)");
+  invisible.style.backgroundImage = `radial-gradient(circle at center, hsl(${randomColorValue}, 76.2%, 62.2%), hsl(0, 0%, 25%))`;
+  invisible.classList.remove("invisible");
+  visible.classList.add("invisible");
+};
+
 export default {
   components: { AnimatedBackground, VideoOverlay, Logo, FpSection },
   data: () => ({
@@ -94,7 +151,8 @@ export default {
       loopBottom: true,
       easingcss3: "ease-in",
       credits: { enabled: false },
-      onLeave: function (origin, dest) {
+      onLeave: (origin, dest) => {
+        randGradient();
         const classes = document.querySelector("#bg-block").classList;
         classes.remove("left", "full", "none");
         switch (dest.index) {
@@ -102,10 +160,10 @@ export default {
             classes.add("left");
             break;
           case 2:
-            classes.add("full");
+            classes.add("none");
             break;
           case 3:
-            classes.add("none");
+            classes.add("full");
             break;
           default:
             break;
@@ -113,20 +171,24 @@ export default {
       },
     },
   }),
+  mounted() {
+    randGradient();
+    setInterval(randGradient, 8000);
+  },
 };
 </script>
 
 <style lang="scss">
 body {
   font-size: 16px;
-  background: #000;
+  background: #e10d0d;
   color: #fff;
 }
 .fp-watermark {
   display: none !important;
 }
 #app {
-  position: relativee;
+  position: relative;
   z-index: 10;
 }
 #bg-block {
@@ -136,7 +198,7 @@ body {
   bottom: 0;
   width: 50vw;
   left: 50%;
-  background: #fff;
+  background: #ffffff;
   z-index: -1;
   transition: 0.3s ease-in;
 
@@ -159,24 +221,38 @@ body {
   filter: contrast(2000%);
 }
 
-.layer2 {
+.gradient {
   position: absolute;
   top: -50%;
   left: -50%;
   bottom: -50%;
   right: -50%;
-  background: radial-gradient(
+  background-image: radial-gradient(
     circle at center,
-    hsl(0, 0%, 1%),
-    hsl(0, 0%, 100%)
+    hsl(168.6, 76.2%, 62.2%),
+    hsl(0, 0%, 25%)
   );
   background-size: auto;
   background-size: 4px 4px;
   transform: rotate(20deg);
+  transition: opacity 1.3s ease-out;
 }
 
-.layer3 {
-  filter: grayscale(1) brightness(95%) contrast(100%);
+.invisible {
+  opacity: 0;
+}
+
+.layer4 {
+  // filter: grayscale(1) brightness(95%) contrast(100%);
   mix-blend-mode: hard-light;
+}
+
+.numblock {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 1;
+  vertical-align: sub;
 }
 </style>
