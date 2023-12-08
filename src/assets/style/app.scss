@@ -1,0 +1,91 @@
+body {
+    font-size: 16px;
+    background: #e10d0d;
+    color: #fff;
+  }
+  #app {
+    position: relative;
+    z-index: 10;
+  }
+  #bg-block {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 50vw;
+    left: 50%;
+    background: #ffffff;
+    z-index: -1;
+    transition: 0.3s ease-in;
+  
+    &.left {
+      left: 0;
+    }
+  
+    &.full {
+      left: 0;
+      width: 100vw;
+    }
+  
+    &.none {
+      left: 100%;
+      width: 0;
+    }
+  }
+  
+  .halftone {
+    filter: contrast(2000%);
+  }
+  
+  .gradient {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    bottom: -50%;
+    right: -50%;
+    background-image: radial-gradient(
+      circle at center,
+      hsl(168.6, 76.2%, 62.2%),
+      hsl(0, 0%, 25%)
+    );
+    background-size: auto;
+    background-size: 4px 4px;
+    transform: rotate(20deg);
+    transition: opacity 1.3s ease-out;
+  }
+  
+  .invisible {
+    opacity: 0;
+  }
+  
+  .layer4 {
+    // filter: grayscale(1) brightness(95%) contrast(100%);
+    mix-blend-mode: hard-light;
+  }
+  
+  .numblock {
+    color: #fff;
+    background: #000;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    line-height: 1;
+    vertical-align: sub;
+  }
+
+  .tab-trigger{
+    cursor: pointer;
+
+    &.is-active {
+      background: #ccc;
+
+      .numblock {
+        color: #ccc;
+      }
+    }
+
+    &:hover {
+      background: #eee;
+    }
+  }

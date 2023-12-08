@@ -1,5 +1,5 @@
 <template>
-  <div class="halftone">
+  <main>
     <div class="layer2 gradient" id="layer2"></div>
     <div class="layer3 gradient invisible" id="layer3"></div>
     <div class="layer4">
@@ -12,13 +12,13 @@
             class="column is-flex is-align-items-center px-6 has-text-black is-half"
           >
             <div class="content">
-              <h1 class="is-size-2 is-family-secondary mb-4">
+              <h1 class="is-size-1 is-family-secondary mb-4">
                 Ożywiamy Twoje pomysły
               </h1>
-              <p class="has-text-justified mb-4">
+              <p class="mb-4">
                 Cześć! Jesteśmy Twoją agencją kreatywną!
               </p>
-              <p class="has-text-justified mb-4">
+              <p class="mb-4">
                 Jesteśmy Twoim partnerem w tworzeniu i doskonaleniu
                 <strong>aplikacji webowych</strong>,
                 <strong>stron internetowych</strong>,
@@ -26,7 +26,7 @@
                 oraz
                 <strong>interaktywnych doświadczeń</strong>, które pozostawiają trwałe wrażenie
               </p>
-              <p class="has-text-justified mb-4">
+              <p class="mb-4">
                 Dołącz do nas w podróży tam, gdzie innowacja spotyka wyobraźnię!
               </p>
               <button
@@ -46,11 +46,11 @@
               <h2 class="is-size-3 is-family-secondary mb-4">
                 Od początku do końca... i jeszcze dalej!
               </h2>
-              <p class="has-text-justified mb-4">
+              <p class="mb-4">
                 Zdradź nam swoje marzenia, a my zajmiemy się resztą<br />
                 Nasi eksperci dostostosują się do Twoich wymagań i zaproponują najlepsze rozwiązania
               </p>
-              <p class="has-text-justified mb-4">
+              <p class="mb-4">
                 <span class="has-text-weight-bold">Potrzebny design?</span> No problem.<br />
                 <span class="has-text-weight-bold">Back-end?</span> Mamy to obcykane!<br />
                 <span class="has-text-weight-bold">Front-end?</span> Pewnie.<br />
@@ -89,41 +89,98 @@
             </div>
             <div class="columns">
               <div class="column">
-                <div class="has-background-white has-text-black px-4 py-4">
-                  <div class="mb-3">
-                    <span class="numblock has-background-black has-text-white is-size-1 has-text-weight-bold mr-3">1</span>
+                <div class="has-background-white is-relative has-text-black px-4 py-4">
+                  <div class="tab-trigger is-active mb-3">
+                    <span class="numblock is-size-1 has-text-weight-bold mr-3">1</span>
                     <span class="is-size-4 is-family-secondary">Zbadamy Twoje potrzeby</span>
                   </div>
-                  <div class="mb-3">
-                    <span class="numblock has-background-black has-text-white is-size-1 has-text-weight-bold mr-3">2</span>
+                  <div class="tab-trigger mb-3">
+                    <span class="numblock is-size-1 has-text-weight-bold mr-3">2</span>
                     <span class="is-size-4 is-family-secondary">Zaplanujemy wspólnie etapy projektu</span>
                   </div>
-                  <div class="mb-3">
-                    <span class="numblock has-background-black has-text-white is-size-1 has-text-weight-bold mr-3">3</span>
+                  <div class="tab-trigger mb-3">
+                    <span class="numblock is-size-1 has-text-weight-bold mr-3">3</span>
                     <span class="is-size-4 is-family-secondary">Przygotujemy projekt graficzny</span>
                   </div>
-                  <div class="mb-3">
-                    <span class="numblock has-background-black has-text-white is-size-1 has-text-weight-bold mr-3">4</span>
+                  <div class="tab-trigger mb-3">
+                    <span class="numblock is-size-1 has-text-weight-bold mr-3">4</span>
                     <span class="is-size-4 is-family-secondary">Napiszemy kod Twojej nowej aplikacji</span>
                   </div>
-                  <div class="mb-3">
-                    <span class="numblock has-background-black has-text-white is-size-1 has-text-weight-bold mr-3">5</span>
+                  <div class="tab-trigger mb-3">
+                    <span class="numblock is-size-1 has-text-weight-bold mr-3">5</span>
                     <span class="is-size-4 is-family-secondary">Zajmiemy się wdrożeniem</span>
                   </div>
-                  <div>
-                    <span class="numblock has-background-black has-text-white is-size-1 has-text-weight-bold mr-3">6</span>
-                    <span class="is-size-4 is-family-secondary">Będziemy do Twoich usług tak długo, jak chcesz!</span>
+                  <div class="tab-trigger">
+                    <span class="numblock is-size-1 has-text-weight-bold mr-3">6</span>
+                    <span class="is-size-4 is-family-secondary">Jesteśmy do usług tak długo, jak chcesz!</span>
                   </div>
                 </div>
+              </div>
+              <div class="column">
+                <div class="has-background-white is-relative has-text-black px-4 py-4">blabla
+                  </div>
               </div>
             </div>
           </div>
         </fp-section>
-        <fp-section id="section4"> </fp-section>
+        <fp-section id="section4">
+          <div class="container has-text-black">
+            <div class="columns">
+              <div class="column">
+                <h2 class="is-size-1 is-family-secondary has-text-weight-bold">Skontaktuj się z nami!</h2>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column">
+                <form action="mailto:recipient@example.com" method="get" enctype="text/plain" @submit.prevent="$refs.captcha.validate()">
+                  <div class="field">
+                    <label class="label">Imię i nazwisko lub firma</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Imię i nazwisko lub firma">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">E-mail</label>
+                    <div class="control as-icons-right">
+                      <input class="input" type="email" placeholder="Email">
+                      <span class="icon is-small is-right" v-if="invalidEmail">
+                        <i class="fas fa-exclamation-triangle"></i>
+                      </span>
+                    </div>
+                    <p class="help is-danger" v-if="invalidEmail">Nieprawidłowy adres e-mail</p>
+                  </div>
+                  <div class="field">
+                    <label class="label">Jak możemy Ci pomóc?</label>
+                    <div class="control">
+                      <textarea class="textarea" placeholder="Wiadomość"></textarea>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="control">
+                      <label class="checkbox">
+                        <input type="checkbox">
+                        Wyrażam zgodę na przetwarzanie moich danych zgodnie z <a class="is-underlined" href="#">polityką prywatności</a>
+                      </label>
+                    </div>
+                  </div>
+                  <label class="label">Podaj wynik działania</label>
+                  <div class="field has-addons">
+                      <captcha ref="captcha" @success="handleCaptchaSuccess" @error="handleCaptchaError" />
+                  </div>
+                  <div class="field">
+                    <div class="control">
+                      <button class="button is-black">Wyślij</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </fp-section>
       </full-page>
       <div id="bg-block"></div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -131,6 +188,8 @@ import AnimatedBackground from "./components/AnimatedBackground.vue";
 import VideoOverlay from "./components/VideoOverlay.vue";
 import Logo from "./components/Logo.vue";
 import FpSection from "./components/FpSection.vue";
+import CaptchaConf from "@config/captcha.yml";
+import Captcha from './components/Captcha.vue';
 
 const randGradient = () => {
   const randomColorValue = Math.random() * 360;
@@ -142,13 +201,14 @@ const randGradient = () => {
 };
 
 export default {
-  components: { AnimatedBackground, VideoOverlay, Logo, FpSection },
+  components: { AnimatedBackground, VideoOverlay, Logo, FpSection, Captcha },
   data: () => ({
+    invalidEmail: false,
     options: {
       licenseKey: "KEY",
       autoScrolling: true,
       scrollOverflow: false,
-      loopBottom: true,
+      loopBottom: false,
       easingcss3: "ease-in",
       credits: { enabled: false },
       onLeave: (origin, dest) => {
@@ -172,87 +232,12 @@ export default {
     },
   }),
   mounted() {
+    this.$refs.fullpage.api.moveTo(0)
     randGradient();
-    setInterval(randGradient, 8000);
   },
 };
 </script>
 
-<style lang="scss">
-body {
-  font-size: 16px;
-  background: #e10d0d;
-  color: #fff;
-}
-.fp-watermark {
-  display: none !important;
-}
-#app {
-  position: relative;
-  z-index: 10;
-}
-#bg-block {
-  display: block;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 50vw;
-  left: 50%;
-  background: #ffffff;
-  z-index: -1;
-  transition: 0.3s ease-in;
-
-  &.left {
-    left: 0;
-  }
-
-  &.full {
-    left: 0;
-    width: 100vw;
-  }
-
-  &.none {
-    left: 100%;
-    width: 0;
-  }
-}
-
-.halftone {
-  filter: contrast(2000%);
-}
-
-.gradient {
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  bottom: -50%;
-  right: -50%;
-  background-image: radial-gradient(
-    circle at center,
-    hsl(168.6, 76.2%, 62.2%),
-    hsl(0, 0%, 25%)
-  );
-  background-size: auto;
-  background-size: 4px 4px;
-  transform: rotate(20deg);
-  transition: opacity 1.3s ease-out;
-}
-
-.invisible {
-  opacity: 0;
-}
-
-.layer4 {
-  // filter: grayscale(1) brightness(95%) contrast(100%);
-  mix-blend-mode: hard-light;
-}
-
-.numblock {
-  display: inline-block;
-  width: 70px;
-  height: 70px;
-  text-align: center;
-  line-height: 1;
-  vertical-align: sub;
-}
+<style scoped lang="scss">
+@import './assets/style/app.scss';
 </style>
