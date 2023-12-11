@@ -72,10 +72,12 @@ body {
     text-align: center;
     line-height: 1;
     vertical-align: sub;
+    transition: all .3s linear;
   }
 
   .tab-trigger{
     cursor: pointer;
+    transition: all .3s linear;
 
     &.is-active {
       background: #ccc;
