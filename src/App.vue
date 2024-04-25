@@ -337,7 +337,6 @@
 
 <script>
 import AnimatedBackground from "./components/AnimatedBackground.vue";
-import VideoOverlay from "./components/VideoOverlay.vue";
 import Logo from "./components/Logo.vue";
 import FpSection from "./components/FpSection.vue";
 import CaptchaConf from "@config/captcha.yml";
@@ -353,7 +352,7 @@ const randGradient = () => {
 };
 
 export default {
-  components: { AnimatedBackground, VideoOverlay, Logo, FpSection, Captcha },
+  components: { AnimatedBackground, Logo, FpSection, Captcha },
   data: () => ({
     tab: 1,
     invalidEmail: false,
